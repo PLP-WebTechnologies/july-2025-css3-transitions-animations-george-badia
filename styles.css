@@ -1,0 +1,74 @@
+/* General Page Styling */
+body {
+   font-family: Arial, sans-serif;
+   text-align: center;
+   padding: 30px;
+   background: #f0f8ff;
+ }
+ 
+ /* ===== Part 1: CSS Transition on Button ===== */
+ #colorBtn {
+   background: #3498db;
+   color: white;
+   padding: 15px 30px;
+   border: none;
+   cursor: pointer;
+   transition: background 0.5s, transform 0.3s;
+   border-radius: 8px;
+ }
+ #colorBtn:hover {
+   background: #2ecc71;
+   transform: scale(1.1);
+ }
+ 
+ /* ===== Part 1: CSS Keyframes Animation ===== */
+ .box {
+   width: 100px;
+   height: 100px;
+   margin: 30px auto;
+   background: #e74c3c;
+   border-radius: 10px;
+   animation: bounce 2s infinite;
+ }
+ 
+ /* Bounce animation */
+ @keyframes bounce {
+   0%   { transform: translateY(0); }
+   50%  { transform: translateY(-50px); }
+   100% { transform: translateY(0); }
+ }
+ 
+ /* ===== Part 3: Modal Styling ===== */
+ .modal {
+   display: none; /* Hidden by default */
+   position: fixed;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background: rgba(0,0,0,0.6);
+   animation: fadeIn 0.5s;
+ }
+ .modal-content {
+   background: white;
+   margin: 15% auto;
+   padding: 20px;
+   width: 300px;
+   border-radius: 10px;
+   transform: translateY(-200px);
+   opacity: 0;
+   animation: slideDown 0.5s forwards;
+ }
+ #closeModalBtn {
+   float: right;
+   font-size: 24px;
+   cursor: pointer;
+ }
+ 
+ /* Modal animations */
+ @keyframes fadeIn {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+ }
+ @keyframes slideDown {
+   from { transform: translateY(-200px); opacity: 0; }
+   to   { transform: translateY(0); opacity: 1; }
+ }
+ 
